@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: Run echo
-        run: ${{ github.event.inputs.data }}
+        run: echo "${{ github.event.inputs.data }}"
