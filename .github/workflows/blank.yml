@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      data:
+        description: "Input data"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run echo
+        run: ${{ github.event.inputs.data }}
